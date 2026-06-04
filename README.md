@@ -109,14 +109,16 @@ Solutions are stored in `./data/solutions.json`. Zero dependencies, works offlin
 ## Where This Fits
 
 ```
-AI-systems-evolution   ← rung 02 (Memory organ: state across turns)
+AI-systems-evolution   ← start here (rung 02: memory across turns)
     |
-    └─► Agent-Anatomy  ← memory organ dissected
+    └─► agentic-patterns  ← Pattern 03 (reality-first memory)
             |
             └─► Agent-Recall  ← THIS REPO (cross-session solution memory)
 ```
 
-For the full memory + failure stack: combine with **Agent-Scars** (failure memory) and **agentkernel** (production engine).
+For the full memory + failure stack: combine with [Agent-Scars](https://github.com/shubham0086/Agent-Scars) (failure memory) and [agentkernel](https://github.com/shubham0086/agentkernel) (production engine).
+
+**Theory companion:** [Pattern 03: Reality-First Memory](https://github.com/shubham0086/agentic-patterns/blob/main/docs/03-reality-first-memory.md)
 
 ---
 
