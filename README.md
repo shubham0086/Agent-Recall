@@ -1,8 +1,12 @@
 # Agent-Recall
 
+> **IMPORTANT**: This repository contains real, production-ready, battle-tested code extracted directly from active commercial systems (like Agency OS or Founder Growth OS), rather than simplified mock learning artifacts.
+>
+> For project walkthroughs, architecture flowcharts, and system context, visit the live landing page: [shubham0086.github.io/MyPortfolio.github.io/projects/agent-recall.html](https://shubham0086.github.io/MyPortfolio.github.io/projects/agent-recall.html)
+
 **The agent recalls how it solved a similar task last week, instead of starting from scratch.**
 
-Most agents have no memory of what they built. They solve the same problem repeatedly, make the same choices, repeat the same mistakes. Agent-Recall stores solutions and finds the closest match when a new task arrives — injecting that context into the prompt before the agent starts.
+Most agents have no memory of what they built. They solve the same problem repeatedly, make the same choices, and repeat the same mistakes. Agent-Recall stores solutions and finds the closest match when a new task arrives, injecting that context into the prompt before the agent starts.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node 18+](https://img.shields.io/badge/Node-18%2B-brightgreen.svg)](package.json)
