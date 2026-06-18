@@ -2,7 +2,7 @@
 
 > **IMPORTANT**: This repository contains real, production-ready, battle-tested code extracted directly from active commercial systems (like Agency OS or Founder Growth OS), rather than simplified mock learning artifacts.
 >
-> For project walkthroughs, architecture flowcharts, and system context, visit the live landing page: [shubham0086.github.io/MyPortfolio.github.io/projects/agent-recall.html](https://shubham0086.github.io/MyPortfolio.github.io/projects/agent-recall.html)
+> For project walkthroughs, architecture flowcharts, and system context, visit the live landing page: [my-portfolio-github-io-beta-five.vercel.app/projects/agent-recall.html](https://my-portfolio-github-io-beta-five.vercel.app/projects/agent-recall.html)
 
 **The agent recalls how it solved a similar task last week, instead of starting from scratch.**
 
@@ -129,7 +129,7 @@ For the full memory + failure stack: combine with [Agent-Scars](https://github.c
 <div align="center">
 
 Built by [Shubham Prajapati](https://github.com/shubham0086) ·
-[Portfolio](https://shubham0086.github.io/MyPortfolio.github.io/)
+[Portfolio](https://my-portfolio-github-io-beta-five.vercel.app/)
 · MIT
 
 </div>
