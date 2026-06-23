@@ -1,0 +1,27 @@
+{
+  "name": "agent-recall",
+  "version": "1.0.0",
+  "description": "Persistent solution memory for AI agents — recall how similar tasks were solved instead of starting from scratch",
+  "type": "module",
+  "main": "src/Recall.js",
+  "bin": {
+    "agent-recall": "mcp_server.js"
+  },
+  "files": [
+    "src",
+    "mcp_server.js"
+  ],
+  "scripts": {
+    "test": "node tests/recall.test.js",
+    "test:mcp": "node tests/mcp.test.js",
+    "start": "node mcp_server.js",
+    "demo": "node demo/recall.js"
+  },
+  "keywords": ["ai", "agent", "memory", "recall", "persistent", "solutions", "llm", "mcp"],
+  "author": "Shubham Prajapati",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
