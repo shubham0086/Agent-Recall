@@ -15,7 +15,7 @@ new Recall(WS).clear();
 // 1. Tool surface
 {
   const names = TOOLS.map((t) => t.name).sort();
-  assert.deepStrictEqual(names, ['recall_context', 'recall_similar', 'recall_store']);
+  assert.deepStrictEqual(names, ['recall_context', 'recall_info', 'recall_similar', 'recall_store']);
   for (const t of TOOLS) assert.ok(t.inputSchema && t.description, `${t.name} has schema+desc`);
   ok('exposes recall_store + recall_similar + recall_context with valid schemas');
 }

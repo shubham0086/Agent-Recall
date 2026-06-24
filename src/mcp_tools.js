@@ -41,7 +41,7 @@ export const TOOLS = [
       },
       required: ['goal', 'approach', 'outcome'],
     },
-    annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: false },
+    annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: false },
   },
   {
     name: 'recall_similar',
@@ -57,7 +57,7 @@ export const TOOLS = [
       },
       required: ['goal'],
     },
-    annotations: { readOnlyHint: true },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
   {
     name: 'recall_context',
@@ -72,9 +72,23 @@ export const TOOLS = [
       },
       required: ['goal'],
     },
-    annotations: { readOnlyHint: true },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+  },
+  {
+    name: 'recall_info',
+    description:
+      'Lightweight introspection: returns this spoke name, version, and the list of available tool names. ' +
+      'Read-only; takes no arguments.',
+    inputSchema: {
+      type: 'object',
+      properties: {},
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
 ];
+
+// Spoke identity, surfaced by recall_info. Kept in sync with package.json + mcp_server.js.
+export const SPOKE = { name: 'agent-recall', version: '1.0.0' };
 
 export async function handleTool(name, args = {}) {
   const recall = recallFor(args.workspace);
@@ -96,6 +110,9 @@ export async function handleTool(name, args = {}) {
       if (!args.goal) throw new Error('recall_context requires "goal"');
       const context = recall.buildRecallContext(args.goal);
       return { found: context !== '', context };
+    }
+    case 'recall_info': {
+      return { name: SPOKE.name, version: SPOKE.version, tools: TOOLS.map((t) => t.name) };
     }
     default:
       throw new Error(`Unknown tool: ${name}`);
